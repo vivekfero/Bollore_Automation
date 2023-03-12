@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.10 on linux)" generated="20230311 17:51:46.576" rpa="false" schemaversion="3">
+<suite id="s1" name="Reports" source="/home/fero/PycharmProjects/Bollore_Automation/TestCases/Reports.robot">
+<test id="s1-t1" name="open page" line="7">
+<kw name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Browser}</arg>
+<arg>${url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230311 17:51:46.807" level="INFO">Opening browser 'chrome' to base url 'https://sit.fast.bollore.fero.ai/'.</msg>
+<status status="PASS" starttime="20230311 17:51:46.805" endtime="20230311 17:51:50.680"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[1]/div/div/div[1]/div[1]/input</arg>
+<arg>admin_vivek</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:50.684" level="INFO">Typing text 'admin_vivek' into text field 'xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[1]/div/div/div[1]/div[1]/input'.</msg>
+<status status="PASS" starttime="20230311 17:51:50.681" endtime="20230311 17:51:50.989"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[2]/div/div/div/div[1]/input</arg>
+<arg>fero@1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:50.991" level="INFO">Typing text 'fero@1234' into text field 'xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[2]/div/div/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230311 17:51:50.990" endtime="20230311 17:51:51.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:51.359" level="INFO">Clicking element 'xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20230311 17:51:51.358" endtime="20230311 17:51:51.478"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Orders</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230311 17:51:51.478" endtime="20230311 17:51:53.445"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Orders</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230311 17:51:53.481" level="INFO">Current page contains text 'Orders'.</msg>
+<status status="PASS" starttime="20230311 17:51:53.445" endtime="20230311 17:51:53.482"/>
+</kw>
+<status status="PASS" starttime="20230311 17:51:46.804" endtime="20230311 17:51:53.482"/>
+</kw>
+<status status="PASS" starttime="20230311 17:51:46.802" endtime="20230311 17:51:53.484"/>
+</test>
+<test id="s1-t2" name="Download The Trip Reports" line="18">
+<status status="FAIL" starttime="20230311 17:51:53.487" endtime="20230311 17:51:53.489">Test contains no keywords.</status>
+</test>
+<test id="s1-t3" line="19">
+<kw name="Add_Steps" library="Reports">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MainMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:53.494" level="INFO">Clicking element 'xpath://header/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230311 17:51:53.493" endtime="20230311 17:51:53.673"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:51:54.674" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:51:53.674" endtime="20230311 17:51:54.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Analytics}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:54.676" level="INFO">Clicking element 'xpath://div[contains(text(),'Analytics')]'.</msg>
+<status status="PASS" starttime="20230311 17:51:54.675" endtime="20230311 17:51:54.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:51:55.770" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:51:54.769" endtime="20230311 17:51:55.770"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Reports}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:55.772" level="INFO">Clicking element 'xpath://div[contains(text(),'Reports')]'.</msg>
+<status status="PASS" starttime="20230311 17:51:55.771" endtime="20230311 17:51:55.871"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230311 17:51:55.872" endtime="20230311 17:51:56.027"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:51:57.029" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:51:56.028" endtime="20230311 17:51:57.030"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Create Report</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:57.032" level="INFO">Clicking button 'Create Report'.</msg>
+<status status="PASS" starttime="20230311 17:51:57.031" endtime="20230311 17:51:58.222"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:51:59.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:51:58.223" endtime="20230311 17:51:59.224"/>
+</kw>
+<status status="PASS" starttime="20230311 17:51:53.491" endtime="20230311 17:51:59.224"/>
+</kw>
+<kw name="Download_TripReport_AverageTransporterRating_Report" library="Reports">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://p[contains(text(),'Trip Reports')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:51:59.226" level="INFO">Clicking element 'xpath://p[contains(text(),'Trip Reports')]'.</msg>
+<status status="PASS" starttime="20230311 17:51:59.225" endtime="20230311 17:51:59.321"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:52:00.323" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:51:59.322" endtime="20230311 17:52:00.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(1) &gt; div &gt; div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:00.325" level="INFO">Clicking element 'css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(1) &gt; div &gt; div'.</msg>
+<status status="PASS" starttime="20230311 17:52:00.323" endtime="20230311 17:52:00.444"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[contains(text(),'Average Transporter Rating')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:00.445" level="INFO">Clicking element 'xpath://div[contains(text(),'Average Transporter Rating')]'.</msg>
+<status status="PASS" starttime="20230311 17:52:00.444" endtime="20230311 17:52:00.578"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(3)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:00.580" level="INFO">Clicking element 'css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(3)'.</msg>
+<status status="PASS" starttime="20230311 17:52:00.578" endtime="20230311 17:52:00.761"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#app &gt; div.v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active &gt; div &gt; div &gt; div &gt; div &gt; div.v-picker__body.theme--light &gt; div &gt; div.v-date-picker-table.v-date-picker-table--date.theme--light &gt; table &gt; tbody &gt; tr:nth-child(2) &gt; td:nth-child(6) &gt; button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:00.763" level="INFO">Clicking element 'css=#app &gt; div.v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active &gt; div &gt; div &gt; div &gt; div &gt; div.v-picker__body.theme--light &gt; div &gt; div.v-date-picker-table.v-date-picker-table--date.theme--light &gt; table &gt; tbody &gt; tr:nth-child(2) &gt; td:nth-child(6) &gt; button'.</msg>
+<status status="PASS" starttime="20230311 17:52:00.762" endtime="20230311 17:52:00.909"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:52:01.911" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:52:00.910" endtime="20230311 17:52:01.911"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(4)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:01.913" level="INFO">Clicking element 'css=#app &gt; div.v-dialog__content.v-dialog__content--active &gt; div &gt; div &gt; div.v-card__text.pa-2 &gt; form &gt; div &gt; div:nth-child(4)'.</msg>
+<status status="PASS" starttime="20230311 17:52:01.912" endtime="20230311 17:52:02.039"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#app &gt; div.v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active &gt; div &gt; div &gt; div &gt; div &gt; div.v-picker__body.theme--light &gt; div &gt; div.v-date-picker-table.v-date-picker-table--date.theme--light</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:02.041" level="INFO">Clicking element 'css=#app &gt; div.v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active &gt; div &gt; div &gt; div &gt; div &gt; div.v-picker__body.theme--light &gt; div &gt; div.v-date-picker-table.v-date-picker-table--date.theme--light'.</msg>
+<status status="PASS" starttime="20230311 17:52:02.040" endtime="20230311 17:52:02.210"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230311 17:52:02.211" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20230311 17:52:02.210" endtime="20230311 17:52:02.493"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230311 17:52:03.495" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230311 17:52:02.493" endtime="20230311 17:52:03.496"/>
+</kw>
+<status status="PASS" starttime="20230311 17:51:59.225" endtime="20230311 17:52:03.496"/>
+</kw>
+<status status="PASS" starttime="20230311 17:51:53.490" endtime="20230311 17:52:03.500"/>
+</test>
+<test id="s1-t4" name="close page" line="24">
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230311 17:52:03.505" endtime="20230311 17:52:03.603"/>
+</kw>
+<status status="PASS" starttime="20230311 17:52:03.504" endtime="20230311 17:52:03.604"/>
+</kw>
+<status status="PASS" starttime="20230311 17:52:03.502" endtime="20230311 17:52:03.609"/>
+</test>
+<status status="FAIL" starttime="20230311 17:51:46.577" endtime="20230311 17:52:03.610"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Reports">Reports</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230311 17:51:46.791" level="ERROR">Error in file '/home/fero/PycharmProjects/Bollore_Automation/Resources/Reports/Reports.robot' on line 3: Resource file '../Resources/Common.robot' does not exist.</msg>
+</errors>
+</robot>

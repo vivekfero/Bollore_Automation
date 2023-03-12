@@ -1,0 +1,69 @@
+*** Settings ***
+Library     SeleniumLibrary
+Resource    ../Resources/Common.robot
+*** Variables ***
+
+
+*** Test Cases ***
+Create Order
+
+             open browser              ${Browser}      ${url}
+          #
+           input text                xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[1]/div/div/div[1]/div[1]/input       admin_vivek
+           input text                xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[2]/div/div/div/div[1]/input         fero@1234
+           click element             xpath://html/body/div/div/div/div/main/div/div/div/form/div/div[2]/div/div[3]/button
+          wait until page contains  Orders   30s
+         page should contain       Orders
+          sleep                     3s
+
+            click element       ${MainMenu}
+
+            sleep               1s
+            click element       xpath://div[contains(text(),'Orders')]
+            sleep               1s
+            click element       xpath://div[contains(text(),'Pending Order')]
+            sleep               1s
+            click element       xpath://span[contains(text(),'Create Order')]
+            sleep               1s
+               maximize browser window
+               sleep            3s
+            input text          xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[1]/div/div/div[1]/div[1]/input                     JOBNO625
+            input text          xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[2]/div/div/div[1]/div[1]/input                     BTN82634
+            click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[3]/div/div[4]/div/div/div[1]/div[1]/input[1]
+            click element       xpath://div[contains(text(),'Standard')]
+            input text          xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[4]/div/div/div[1]/div[1]/input                     Food
+            click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[7]/div/div/div/div[1]/input
+            input text          xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[8]/div/div/div[1]/div[1]/input                    35
+            input text          xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[9]/div/div/div/div[1]/input                       Hello
+            click element       xpath://html/body/div[1]/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[1]/div[1]/div/div[1]/div/input
+            click element       xpath://html/body/div[1]/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[1]/div[1]/div/div[1]/div/input
+            sleep               1s
+            click element       xpath://html/body/div[1]/div/div/div[5]/div/div/div[1]/div/div[2]/div/div[2]/table/tbody
+            sleep               1s
+
+
+       #     click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[1]
+      #      sleep               1s
+      #      click element       xpath://html/body/div[1]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[4]
+         #   click element        xpath://input[@id='input-87']
+            sleep                2s
+    #        click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[1]/div[1]/div/div[1]/div/input
+       #     sleep                1s
+      #      click element       xpath://html/body/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/table/tbody/tr[4]/td[4]/button/div
+       #     sleep                 1s
+      #      click element       xpath:/html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[2]/div[1]/div/div/div/input
+       #     sleep                2s
+
+          #  click element       xpath://html/body/div[1]/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[1]/div[1]/div/div[1]/div/input
+         #   click element       xpath://html/body/div[1]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]
+        #   sleep               1s
+        #    click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[2]/div[1]/div/div[1]/div/input
+        #   click element       xpath://html/body/div/div/div/div[6]/div/div/div[1]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[5]/button/div
+        #   click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[11]/div/div[3]/div[1]/div/div[1]/div/input
+        #    click element       xpath://html/body/div/div/div/div[7]/div/div/div[1]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[5]/button/div
+        #   click element       xpath://html/body/div/div/div/div[1]/main/div/div/div/form/div[1]/div[12]/div/div/div/div[1]/input[1]
+        #   click element       xpath://div[contains(text(),'Pickup')]
+         #   sleep               5s
+            close browser
+
+*** Keywords ***
