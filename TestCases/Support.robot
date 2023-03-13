@@ -9,9 +9,9 @@ OpenBrowser
 
 TestSupportModule
             Support.Click Operation
-         #   Create Support Ticket For Rate Enquiry Module
-        #    Create Support Ticket For Invoice Module
-        #    Create Support Ticket For Trip Module
+            Create Support Ticket For Rate Enquiry Module
+            Create Support Ticket For Trip Module
+            Create Support Ticket For Invoice Module
 
 closeBrowser
             Common.End Web Test
