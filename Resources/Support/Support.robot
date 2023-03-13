@@ -47,7 +47,6 @@ Create Support Ticket For Trip Module
             sleep               6s
             wait until page contains     Ticket created successfully!
 
-
 Create Support Ticket For Invoice Module
 
             click element       ${AddTicket}
