@@ -11,7 +11,9 @@ open browser
 
 click steps
         RateEnquiry.Add_Steps
-        RateEnquiry.Add_RateEnquiry
+
+        RateEnquiry.Add_Loose_RateEnquiry
+        RateEnquiry.Add_FCL_RateEnquiry
 
 close browser
         Common.End Web Test
